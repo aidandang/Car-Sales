@@ -1,12 +1,11 @@
 export const ADD_FEATURE = 'ADD_FEATURE';
 export const REMOVE_FEATURE = 'REMOVE_FEATURE';
-export const CAR_DETAILS = 'CAR_DETAILS';
 
 // add feature
-export const addFeature = id => {
+export const addFeature = item => {
   return {
     type: ADD_FEATURE,
-    id
+    item
   }
 }
 

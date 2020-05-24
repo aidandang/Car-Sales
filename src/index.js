@@ -10,6 +10,8 @@ import './styles.scss';
 
 const store = createStore(rootReducer);
 
+console.log(store.getState());
+
 const rootElement = document.getElementById('root');
 ReactDOM.render(
   <Provider store={store}>
