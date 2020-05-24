@@ -1,6 +1,5 @@
 import React from 'react';
-
-import Header from './Header';
+import CarInfo from '../containers/CarInfo'
 import AddedFeatures from './AddedFeatures';
 import AdditionalFeatures from './AdditionalFeatures';
 import Total from './Total';
@@ -26,7 +25,7 @@ const App = () => {
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={state.car} />
+        <CarInfo />
         <AddedFeatures car={state.car} />
       </div>
       <div className="box">

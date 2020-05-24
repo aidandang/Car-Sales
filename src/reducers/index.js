@@ -1,8 +1,12 @@
-import { combineReducers } from 'redux'
-import features from './features'
+import { combineReducers } from 'redux';
+import additionalPrice from './additionalPrice'
+import car from './car';
+import additionalFeatures from './additionalFeatures';
 
 const rootReducer = combineReducers({
-  features
+  additionalPrice,
+  car,
+  additionalFeatures
 });
 
-export default rootReducer
+export default rootReducer;
