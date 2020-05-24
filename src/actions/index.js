@@ -10,9 +10,9 @@ export const addFeature = item => {
 }
 
 // remove feature
-export const removeFeature = id => {
+export const removeFeature = item => {
   return {
     type: REMOVE_FEATURE,
-    id
+    item
   }
 }

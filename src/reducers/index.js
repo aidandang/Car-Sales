@@ -28,6 +28,7 @@ const rootReducer = (state = initialState, action) => {
       } else {
         return {
           ...state,
+          additionalPrice: state.additionalPrice + action.item.price,
           car: { 
             features: [...state.car.features, action.item], 
             price: state.car.price, 
@@ -40,7 +41,14 @@ const rootReducer = (state = initialState, action) => {
     case REMOVE_FEATURE:
       return {
         ...state,
-        car: { features: state.car.features.filter(feature => feature.id !== action.id) }
+        additionalPrice: state.additionalPrice - action.item.price,
+        car: { 
+          features: state.car.features.filter(feature => feature.id !== action.item.id), 
+          price: state.car.price, 
+          name: state.car.name, 
+          image: state.car.image 
+        },
+        additionalFeatures: [...state.additionalFeatures]
       }
     default:
       return state

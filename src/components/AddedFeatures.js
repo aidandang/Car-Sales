@@ -7,14 +7,13 @@ const mapStateToProps = state => {
 }
 
 let AddedFeatures = props => {
-  console.log(props.car.features)
   return (
     <div className="content">
       <h6>Added features:</h6>
       {props.car.features.length > 0 ? (
         <ol type="1">
           {props.car.features.map(item => {
-            return <AddedFeature key={item.id} feature={item} />
+            return <AddedFeature key={item.id} feature={item} dispatch={props.dispatch} />
           })}
         </ol>
       ) : (
